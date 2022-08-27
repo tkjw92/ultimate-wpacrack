@@ -4,11 +4,12 @@ import subprocess
 import threading
 import string
 import random
+from colorama import Fore
 
 os.system("clear")
 
 if(os.getuid() != 0):
-    print("Jalankan script sebagai root (Super User) !!!")
+    print(Fore.RED + "Jalankan script sebagai root (Super User) !!!")
 else:
     iface = list(psutil.net_if_addrs().keys())
 
